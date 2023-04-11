@@ -1,0 +1,425 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Merienda:wght@700&family=Yatra+One&display=swap');
+
+* {
+    margin: 0;
+}
+
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.logo {
+    font-size: 35px;
+    font-family: 'Righteous', cursive;
+}
+
+.logo a {
+    text-decoration: none;
+    color: lightskyblue;
+}
+
+span {
+    color: darkblue;
+}
+
+.nav-opt {
+    display: flex;
+    list-style: none;
+    margin: 0 15px;
+
+
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background-color: #000;
+    display: block;
+    margin: 5px 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-items {
+    margin-left: 70px;
+    font-size: 20px;
+    font-family: 'DM Serif Display', serif;
+    font-weight: bold;
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.nav-items a {
+    text-decoration: none;
+    color: black;
+}
+.nav-items a:hover{
+    color: darkred;
+}
+
+
+/* @media(max-width:668px){
+    .nav-opt{
+        display: none;
+        flex-direction: column;
+        background-color: rgb(155, 196, 221);
+        padding: 10px;
+    }
+    .nav-items{
+        margin-right: 5px;
+        margin-bottom: 5px;
+    }
+    .nav-toggle {
+        display: block;
+        background-color:transparent;
+        border: none;
+        cursor: pointer;
+      }
+    .line{
+        width:20px;
+        height: 2px;
+        color: black;
+        margin-bottom: 5px;
+    }
+    .navbar-active{
+        display: flex;
+    }
+} */
+
+
+.banner {
+    background: url(./images/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 3;
+    width: 100%;
+    height: 750px;
+    text-align: center;
+    color: white;
+    margin-top: 1px;
+}
+
+.banner h1 {
+    padding-top: 250px;
+    font-size: 4rem;
+
+}
+
+.banner h3 {
+    margin: 5px;
+    font-family: 'Acme', sans-serif;
+    letter-spacing: 1px;
+    font-size: 23px;
+}
+
+.banner button {
+    font-size: 17px;
+    padding: 8px;
+    margin-top: 18px;
+    background: linear-gradient(45deg, black, transparent);
+    color: white;
+}
+
+.introbox {
+    display: flex;
+    align-items: center;
+    width: 55%;
+    gap: 25px;
+    margin: 85px auto;
+}
+
+.intro {
+    /* width: 80%; */
+    line-height: 30px;
+}
+
+.intro h2 {
+    font-size: 30px;
+}
+.intro p{
+    text-align: justify;
+}
+
+.intro-pic {
+    width: 20%;
+}
+
+.intro-pic img {
+    height: 305px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Yatra One', cursive;
+}
+
+.booking {
+    display: flex;
+    margin: 32px;
+}
+
+.book-pic {
+    width: 50%;
+}
+
+.book-pic img {
+    /* height: 550px; */
+    width: 100%;
+}
+
+.book-form {
+    width: 50%;
+    box-shadow: 5px 10px 18px #888888;
+    padding: 4rem;
+}
+
+.book-form input {
+    width: 96%;
+    margin: 19px auto;
+    height: 33px;
+}
+.book-form textarea{
+    width: 96%;
+    margin: 19px auto;
+
+}
+
+.book-form label {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.book-form button {
+    padding: 9px 19px;
+    font-size: 15px;
+    margin-top: 8px;
+    color: white;
+    background: black;
+
+}
+
+.book-form button:hover {
+    background: white;
+    color: black;
+}
+
+.footer {
+    background: black;
+    color: white;
+    /* width: 100%; */
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer .about {
+    padding: 0 25px;
+    max-width: 764px;
+    margin: 25px 0;
+}
+.footer .about p{
+    margin-top: 6px;
+    line-height: 25px;
+}
+
+.footer .locations{
+    margin: 23px 12px;
+}
+.locations ul, .follow ul{
+    list-style: none;
+    margin-top:5px ;
+    line-height: 25px;
+    margin-left: 1px;
+    padding-left: 0;
+}
+
+.footer .follow {
+    margin: 23px 12px;
+}
+
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 8px 15px;
+    justify-content: center;
+}
+
+.gcard {
+    margin: 16px;
+    max-width: 350px;
+    height: 350px;
+    padding: 24px;
+    background-color: #d3d3d347;
+}
+
+.gcard:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+    -webkit-transform: translateY(-3px);
+    transform: translateY(-3px);
+    transition: all 0.7s ease-out 0s;
+}
+
+.gcard img {
+    width: 100%;
+    height: 100%;
+}
+
+.packages {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 8px 15px;
+    justify-content: center;
+}
+
+.p-card {
+    max-width: 455px;
+    padding: 20px;
+    background-color: aliceblue;
+    margin: 10px;
+}
+
+.p-card img {
+    width: 100%;
+    height: 350px;
+    margin-bottom: 10px;
+}
+.p-card p{
+    margin-top: 5px;
+    line-height: 23px;
+}
+
+.p-card button {
+    padding: 10px 20px;
+    margin-top: 8px;
+    border-radius: 7px;
+    border: none;
+    background-color: darkslategray;
+    color: white;
+}
+
+.p-card button:hover {
+    background-color: white;
+    color: darkslategray;
+}
+
+h3 {
+    font-size: 23px;
+}
+
+.autoplay {
+    margin: 45px;
+}
+
+.service {
+    text-align: center;
+    background-color: cornsilk;
+    padding: 15px 25px ;
+    line-height: 23px;
+    /* height: 176px; */
+    gap: 10px;
+}
+.service i{
+    margin-top: 6px;
+}
+.service h4{
+    margin: 6px 0;
+}
+
+.slick-prev,
+.slick-next {
+    display: none !important;
+}
+.active{
+    display: flex !important;
+}
+
+@media(max-width:940px) {
+    .introbox {
+        flex-wrap: wrap;
+        margin: 40px 25px;
+        align-items: center;
+        justify-content: center;
+        width: auto;
+    }
+
+    .intro {
+        width: auto;
+    }
+
+    .intro-pic {
+        width: auto;
+    }
+
+    .booking {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+@media(max-width:768px) {
+    .nav-opt {
+        display: none;
+        position: absolute;
+        flex-direction: column;
+        justify-content: center;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: white;
+        z-index: 1;
+        margin-top: 10px;
+        gap: 6px;
+    }
+   
+    .nav-items{
+        font-size: 18px;
+    }
+    .hamburger{
+        display: block !important;
+    }
+    .banner h1{
+        font-size: 2rem;
+    }
+    .banner h3{
+        font-size: 15px;
+    }
+    .locations h2,.about h2, .follow h2{
+        font-size: 18px;
+    }
+}
+@media(max-width:555px){
+    .book-form{
+        width: 80%;
+        padding: 2rem;
+    }
+}
+@media(max-width:450px){
+    h1{
+        font-size: 23px;
+    }
+}
+@media(max-width:410px){
+    .p-card img {
+        height: 250px;
+    }
+    .gcard{
+        height: 260px;
+    }
+    
+}
+
