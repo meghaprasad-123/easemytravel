@@ -1,31 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Righteous&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Acme&family=Merienda:wght@700&family=Yatra+One&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Grenze+Gotisch:wght@600&family=Merienda:wght@700&family=Yatra+One&display=swap');
 * {
     margin: 0;
 }
-
 
 .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 15px;
+
+    
+
 }
 
 .logo {
     font-size: 35px;
     font-family: 'Righteous', cursive;
+
+   
 }
+
 
 .logo a {
     text-decoration: none;
-    color: lightskyblue;
+    color:#73bdeb;
+    animation: moving 7s infinite;
+    animation-timing-function: ease-out;
+    position: relative
+}
+@keyframes moving{
+    from{left: 0;}
+    to{left:100px;}
 }
 
 span {
     color: darkblue;
+ 
 }
+
 
 .nav-opt {
     display: flex;
@@ -57,9 +71,9 @@ span {
     font-weight: bold;
 }
 
-.nav-toggle {
+/* .nav-toggle {
     display: none;
-}
+} */
 
 .nav-items a {
     text-decoration: none;
@@ -70,43 +84,14 @@ span {
 }
 
 
-/* @media(max-width:668px){
-    .nav-opt{
-        display: none;
-        flex-direction: column;
-        background-color: rgb(155, 196, 221);
-        padding: 10px;
-    }
-    .nav-items{
-        margin-right: 5px;
-        margin-bottom: 5px;
-    }
-    .nav-toggle {
-        display: block;
-        background-color:transparent;
-        border: none;
-        cursor: pointer;
-      }
-    .line{
-        width:20px;
-        height: 2px;
-        color: black;
-        margin-bottom: 5px;
-    }
-    .navbar-active{
-        display: flex;
-    }
-} */
-
 
 .banner {
     background: url(./images/bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    opacity: 3;
     width: 100%;
-    height: 750px;
+    height: 780px;
     text-align: center;
     color: white;
     margin-top: 1px;
@@ -114,10 +99,15 @@ span {
 
 .banner h1 {
     padding-top: 250px;
-    font-size: 4rem;
-
+    font-size: 5rem;
+    -webkit-box-reflect: below -70px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.2));
+    animation-name: trial;
+    animation-duration: 6s;
 }
-
+@keyframes trial{
+    from{color: transparent;}
+    to{color: white;}
+}
 .banner h3 {
     margin: 5px;
     font-family: 'Acme', sans-serif;
@@ -131,6 +121,7 @@ span {
     margin-top: 18px;
     background: linear-gradient(45deg, black, transparent);
     color: white;
+    cursor: pointer;
 }
 
 .introbox {
@@ -142,7 +133,6 @@ span {
 }
 
 .intro {
-    /* width: 80%; */
     line-height: 30px;
 }
 
@@ -165,6 +155,7 @@ h1 {
     text-align: center;
     font-size: 30px;
     font-family: 'Yatra One', cursive;
+    text-shadow: 2px 2px 4px #00000087
 }
 
 .booking {
@@ -242,10 +233,9 @@ h1 {
 }
 .locations ul, .follow ul{
     list-style: none;
-    margin-top:5px ;
     line-height: 25px;
-    margin-left: 1px;
     padding-left: 0;
+    margin: 5px 0 0 1px;
 }
 
 .footer .follow {
@@ -256,7 +246,7 @@ h1 {
 .gallery {
     display: flex;
     flex-wrap: wrap;
-    margin: 8px 15px;
+    margin: 10px 15px 35px;
     justify-content: center;
 }
 
@@ -265,7 +255,7 @@ h1 {
     max-width: 350px;
     height: 350px;
     padding: 24px;
-    background-color: #d3d3d347;
+    background-color: #dddddd47;
 }
 
 .gcard:hover {
@@ -283,7 +273,7 @@ h1 {
 .packages {
     display: flex;
     flex-wrap: wrap;
-    margin: 8px 15px;
+    margin: 8px 15px 30px;
     justify-content: center;
 }
 
@@ -347,6 +337,48 @@ h3 {
 }
 .active{
     display: flex !important;
+}
+
+
+.xplore{
+    display: flex;
+    align-items: center;
+    width: 55%;
+    gap: 25px;
+    margin: 55px auto;
+}
+.col-1{
+    width: 40%;
+    font-size: 30px;
+    font-family: 'Grenze Gotisch', cursive;}
+
+.col-2{
+    width: 60%;
+     line-height: 25px;
+}
+.col-2 button{
+    padding: 6px 8px;
+    background: linear-gradient(to right, lightblue, lightgrey);
+    border: inset;
+    font-weight: bold;
+    margin: 12px 0px;
+    cursor: pointer;
+}
+@media(max-width:986px){
+    .xplore{
+        display:flex ;
+        flex-wrap: wrap;
+        margin: 15px auto;
+        width: 96%;
+        gap: 0;
+    }
+    .col-2{
+        width:100%;
+    }
+    .col-1{
+        font-size: 20px;
+        width: 100%;
+    }
 }
 
 @media(max-width:940px) {
